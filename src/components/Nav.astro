@@ -4,7 +4,7 @@ import { useTranslations, type Lang } from '../i18n/translations'
 interface Props { lang: Lang }
 const { lang } = Astro.props
 const t = useTranslations(lang)
-const base = import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/')
 const altHref = lang === 'en' ? `${base}ko/` : base
 
 const links = [
