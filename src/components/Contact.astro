@@ -1,0 +1,25 @@
+---
+import personal from '../data/personal.json'
+---
+
+<section id="contact" class="py-24 border-t border-gray-100">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-2">Get in touch</p>
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Contact</h2>
+    <p class="text-gray-500 max-w-sm mx-auto mb-8 text-sm leading-relaxed">
+      Open to new opportunities and conversations. Feel free to reach out.
+    </p>
+    <a
+      href={`mailto:${personal.email}`}
+      class="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      {personal.email}
+    </a>
+    <p class="text-xs text-gray-300 mt-16">
+      Sieun Bae · Seoul, Republic of Korea
+    </p>
+  </div>
+</section>

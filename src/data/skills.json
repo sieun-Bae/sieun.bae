@@ -1,0 +1,31 @@
+{
+  "languages": [
+    { "name": "Java", "level": "High" },
+    { "name": "TypeScript / JavaScript", "level": "High" },
+    { "name": "Python", "level": "High" },
+    { "name": "C / C++", "level": "Intermediate" },
+    { "name": "R", "level": "Intermediate" }
+  ],
+  "categories": [
+    {
+      "label": "AI / LLM",
+      "items": ["LLM", "LangChain", "LangGraph", "MCP", "RAG", "vLLM", "SGLang", "VectorDB"]
+    },
+    {
+      "label": "Frontend",
+      "items": ["React", "Vue 3", "Tailwind CSS", "SCSS", "Electron", "Styled-components"]
+    },
+    {
+      "label": "Backend",
+      "items": ["Node.js", "FastAPI", "SpringBoot", "Java 17", "BullMQ"]
+    },
+    {
+      "label": "Database",
+      "items": ["PostgreSQL", "SQLite", "MyBatis", "JPA", "QueryDSL", "Liquibase"]
+    },
+    {
+      "label": "Cloud / DevOps",
+      "items": ["AWS", "SCP", "NCP", "Git", "GitOps", "Linux", "Shell"]
+    }
+  ]
+}

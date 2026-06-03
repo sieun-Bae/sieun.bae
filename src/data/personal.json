@@ -1,0 +1,13 @@
+{
+  "name": "Sieun Bae",
+  "title": "Software Engineer & AI Engineer",
+  "location": "Seoul, Republic of Korea",
+  "email": "sieun.bae98@gmail.com",
+  "phone": "+82-10-5057-2566",
+  "summary": "Full-stack engineer at Samsung SDS with 4+ years building enterprise applications and AI-powered services. Focused on LLM-based agent systems, developer tooling, and scalable web platforms.",
+  "github": "https://github.com/sieun-Bae",
+  "languages": [
+    { "name": "Korean", "level": "Native" },
+    { "name": "English", "level": "Fluent" }
+  ]
+}

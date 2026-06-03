@@ -1,0 +1,45 @@
+[
+  {
+    "id": "samsung-sds",
+    "company": "Samsung SDS",
+    "role": "Software Engineer",
+    "location": "Seoul, Republic of Korea",
+    "period": "Jul 2021 – Present",
+    "highlights": [
+      "Full-stack engineering across multiple enterprise systems and AI services",
+      "Delivered technical presentations and project outcomes to executive leadership"
+    ]
+  },
+  {
+    "id": "skku-lab",
+    "company": "SKKU Computer and System Intelligence Lab",
+    "role": "Undergraduate Student Researcher",
+    "location": "Seoul, Republic of Korea",
+    "period": "Feb 2020 – Jun 2020",
+    "highlights": [
+      "Developed a reinforcement learning-driven automated execution agent utilizing time-series market data"
+    ]
+  },
+  {
+    "id": "naver-connect",
+    "company": "CONNECT Foundation, Naver",
+    "role": "Intern",
+    "location": "Seoul, Republic of Korea",
+    "period": "Mar 2018 – Feb 2019",
+    "highlights": [
+      "Planned new EPL modules, created educational content, and redesigned website for play-entry.org",
+      "Supported the full operational process of the 3rd Boostcamp coding bootcamp"
+    ]
+  },
+  {
+    "id": "skku-ta",
+    "company": "Sungkyunkwan University",
+    "role": "Teaching Assistant",
+    "location": "Seoul, Republic of Korea",
+    "period": "Mar 2018 – Dec 2020",
+    "highlights": [
+      "Led tutoring sessions, assisted coursework planning, and taught Python fundamentals and algorithms",
+      "Courses: Introduction to AI, Computational Thinking & SW Coding, Problem Solving & Algorithms"
+    ]
+  }
+]
