@@ -34,7 +34,7 @@ const others = projects.filter(p => !p.featured)
           <p class="text-gray-600 mb-8">{local.description}</p>
 
           <div class="space-y-7">
-            {local.phases.map((phase: { year: number; highlights: string[]; tech: string[] }) => (
+            {(local.phases ?? []).map((phase: { year: number; highlights: string[]; tech: string[] }) => (
               <div>
                 <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">{phase.year}</p>
                 <ul class="space-y-1 mb-3">
@@ -72,7 +72,7 @@ const others = projects.filter(p => !p.featured)
             <p class="text-xs font-medium text-blue-600 mb-3">{local.role}</p>
             <p class="text-sm text-gray-500 mb-4">{local.description}</p>
             <div class="flex flex-wrap gap-1.5">
-              {local.tech.map((tech: string) => (
+              {(local.tech ?? []).map((tech: string) => (
                 <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
               ))}
             </div>

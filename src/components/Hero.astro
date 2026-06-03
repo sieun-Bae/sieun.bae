@@ -1,10 +1,9 @@
 ---
-import { useTranslations, type Lang } from '../i18n/translations'
+import type { Lang } from '../i18n/translations'
 import personal from '../data/personal.json'
 
 interface Props { lang: Lang }
 const { lang } = Astro.props
-const t = useTranslations(lang)
 const local = personal[lang]
 ---
 
