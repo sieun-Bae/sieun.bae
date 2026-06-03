@@ -1,13 +1,15 @@
 {
   "name": "Sieun Bae",
-  "title": "Software Engineer & AI Engineer",
-  "location": "Seoul, Republic of Korea",
   "email": "sieun.bae98@gmail.com",
   "phone": "+82-10-5057-2566",
-  "summary": "Full-stack engineer at Samsung SDS with 4+ years building enterprise applications and AI-powered services. Focused on LLM-based agent systems, developer tooling, and scalable web platforms.",
   "github": "https://github.com/sieun-Bae",
-  "languages": [
-    { "name": "Korean", "level": "Native" },
-    { "name": "English", "level": "Fluent" }
-  ]
+  "linkedin": "https://www.linkedin.com/in/sieun-bae/",
+  "en": {
+    "title": "Software Engineer & AI Engineer",
+    "summary": "Full-stack engineer at Samsung SDS with 4+ years building enterprise applications and AI-powered services. Focused on LLM-based agent systems, developer tooling, and scalable web platforms."
+  },
+  "ko": {
+    "title": "소프트웨어 엔지니어 & AI 엔지니어",
+    "summary": "Samsung SDS 소속 소프트웨어 엔지니어로, 4년 이상 엔터프라이즈 시스템과 AI 서비스를 개발해왔습니다. LLM 기반 에이전트 시스템, 개발자 도구, 확장 가능한 웹 플랫폼에 관심이 많습니다."
+  }
 }

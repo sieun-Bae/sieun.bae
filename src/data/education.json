@@ -3,21 +3,27 @@
     {
       "school": "Sungkyunkwan University (SKKU)",
       "location": "Seoul, Republic of Korea",
-      "degree": "B.S. in Computer Education & Data Science",
-      "note": "Double major",
       "period": "Mar 2016 – Feb 2021",
-      "gpa": "3.9 / 4.5 (Major GPAs: 3.85 / 4.5 and 4.29 / 4.5)"
+      "gpa": "3.9 / 4.5 (Major GPAs: 3.85 / 4.5 and 4.29 / 4.5)",
+      "en": {
+        "degree": "B.S. in Computer Education & Data Science",
+        "note": "Double major"
+      },
+      "ko": {
+        "degree": "컴퓨터교육·데이터사이언스 이학사",
+        "note": "복수전공"
+      }
     }
   ],
   "certifications": [
-    { "name": "Jr. Samsung Certified Professional (AI)", "issuer": "Samsung", "year": 2026 },
-    { "name": "SW Architect (Associate)", "issuer": "Samsung", "year": 2024 },
+    { "name": "Jr. Samsung Certified Professional (AI)", "issuer": "Samsung",              "year": 2026 },
+    { "name": "SW Architect (Associate)",                "issuer": "Samsung",              "year": 2024 },
     { "name": "AWS Certified Solutions Architect (Associate)", "issuer": "Amazon Web Services", "year": 2022 },
-    { "name": "Big Data Analysis Engineer", "issuer": "HRD Korea", "year": 2022 },
-    { "name": "ADsP", "issuer": "Korea Database Agency", "year": 2022 },
-    { "name": "SW Algorithm (Professional)", "issuer": "Samsung", "year": 2021 },
-    { "name": "Engineer Information Processing", "issuer": "HRD Korea", "year": 2021 },
-    { "name": "SQLd", "issuer": "Korea Database Agency", "year": 2021 }
+    { "name": "Big Data Analysis Engineer",              "issuer": "HRD Korea",            "year": 2022 },
+    { "name": "ADsP",                                    "issuer": "Korea Database Agency","year": 2022 },
+    { "name": "SW Algorithm (Professional)",             "issuer": "Samsung",              "year": 2021 },
+    { "name": "Engineer Information Processing",         "issuer": "HRD Korea",            "year": 2021 },
+    { "name": "SQLd",                                    "issuer": "Korea Database Agency","year": 2021 }
   ],
   "leadership": [
     {
@@ -25,21 +31,24 @@
       "location": "San Francisco, CA, USA",
       "period": "2025",
       "org": "Samsung SDS",
-      "description": "Represented Samsung SDS at the conference, attending major AI Agents sessions and engaging in extensive networking with industry professionals."
+      "en": { "description": "Represented Samsung SDS at the conference, attending major AI Agents sessions and engaging in extensive networking with industry professionals." },
+      "ko": { "description": "Samsung SDS를 대표하여 글로벌 컨퍼런스에 참석, 주요 AI 에이전트 세션 수강 및 업계 전문가들과 광범위한 네트워킹 진행." }
     },
     {
       "title": "Global Camp",
       "location": "Seattle, WA, USA",
       "period": "SKKU",
       "org": "SKKU",
-      "description": "Academic modules at the University of Washington; topics included data visualization, neural methods, digital storytelling, and fake news detection."
+      "en": { "description": "Academic modules at the University of Washington; topics included data visualization, neural methods, digital storytelling, and fake news detection." },
+      "ko": { "description": "워싱턴 대학교 학술 모듈 수강; 데이터 시각화, 신경망 방법론, 디지털 스토리텔링, 가짜 뉴스 탐지 등의 주제를 학습." }
     },
     {
       "title": "ICT Volunteering",
       "location": "Vientiane, Laos",
       "period": "SKKU",
       "org": "SKKU",
-      "description": "Education Leader — taught Arduino programming to middle and high school students at the Ministry of Education programming laboratory."
+      "en": { "description": "Education Leader — taught Arduino programming to middle and high school students at the Ministry of Education programming laboratory." },
+      "ko": { "description": "교육 리더로서 교육부 프로그래밍 실습실에서 중·고등학생 대상 아두이노 프로그래밍 교육 진행 및 커리큘럼 설계." }
     }
   ]
 }

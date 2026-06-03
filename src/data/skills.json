@@ -1,31 +1,16 @@
 {
   "languages": [
-    { "name": "Java", "level": "High" },
-    { "name": "TypeScript / JavaScript", "level": "High" },
-    { "name": "Python", "level": "High" },
-    { "name": "C / C++", "level": "Intermediate" },
-    { "name": "R", "level": "Intermediate" }
+    { "name": "Java",                  "en": "High",         "ko": "상" },
+    { "name": "TypeScript / JavaScript","en": "High",         "ko": "상" },
+    { "name": "Python",                "en": "High",         "ko": "상" },
+    { "name": "C / C++",               "en": "Intermediate", "ko": "중" },
+    { "name": "R",                     "en": "Intermediate", "ko": "중" }
   ],
   "categories": [
-    {
-      "label": "AI / LLM",
-      "items": ["LLM", "LangChain", "LangGraph", "MCP", "RAG", "vLLM", "SGLang", "VectorDB"]
-    },
-    {
-      "label": "Frontend",
-      "items": ["React", "Vue 3", "Tailwind CSS", "SCSS", "Electron", "Styled-components"]
-    },
-    {
-      "label": "Backend",
-      "items": ["Node.js", "FastAPI", "SpringBoot", "Java 17", "BullMQ"]
-    },
-    {
-      "label": "Database",
-      "items": ["PostgreSQL", "SQLite", "MyBatis", "JPA", "QueryDSL", "Liquibase"]
-    },
-    {
-      "label": "Cloud / DevOps",
-      "items": ["AWS", "SCP", "NCP", "Git", "GitOps", "Linux", "Shell"]
-    }
+    { "en": "AI / LLM",       "ko": "AI / LLM",       "items": ["LLM", "LangChain", "LangGraph", "MCP", "RAG", "vLLM", "SGLang", "VectorDB"] },
+    { "en": "Frontend",       "ko": "프론트엔드",       "items": ["React", "Vue 3", "Tailwind CSS", "SCSS", "Electron", "Styled-components"] },
+    { "en": "Backend",        "ko": "백엔드",           "items": ["Node.js", "FastAPI", "SpringBoot", "Java 17", "BullMQ"] },
+    { "en": "Database",       "ko": "데이터베이스",     "items": ["PostgreSQL", "SQLite", "MyBatis", "JPA", "QueryDSL", "Liquibase"] },
+    { "en": "Cloud / DevOps", "ko": "클라우드 / DevOps","items": ["AWS", "SCP", "NCP", "Git", "GitOps", "Linux", "Shell"] }
   ]
 }

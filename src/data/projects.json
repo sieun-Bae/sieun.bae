@@ -2,88 +2,163 @@
   {
     "id": "ai-pro",
     "title": "AI Pro",
-    "subtitle": "AI Code Assistant",
-    "role": "AI Engineer",
     "period": "Jun 2024 – Present",
     "featured": true,
-    "description": "Enterprise AI-powered code assistant delivered as IDE plugins with RAG pipelines, LLM serving, and a full admin portal.",
-    "phases": [
-      {
-        "year": 2024,
-        "highlights": [
-          "Code Agent on IDE plugins",
-          "RAG pipeline & preprocessing modules",
-          "Evaluation module",
-          "Open-weight LLM serving (vLLM, SGLang)"
-        ],
-        "tech": ["FastAPI", "React", "Tailwind", "LangGraph", "LangChain"]
-      },
-      {
-        "year": 2025,
-        "highlights": [
-          "Context Engineering modules",
-          "MCP module & built-in tools",
-          "Admin portal (Back-office)"
-        ],
-        "tech": ["Node.js", "SpringBoot", "Java 17", "Liquibase", "React", "FastAPI", "PostgreSQL"]
-      },
-      {
-        "year": 2026,
-        "highlights": [
-          "PoC on General Agent (Sub-Agents, Agent team concept)",
-          "DevOps SaaS"
-        ],
-        "tech": ["Node.js", "Electron", "React", "BullMQ", "SCP", "PostgreSQL", "SQLite"]
-      }
-    ]
+    "en": {
+      "subtitle": "AI Code Assistant",
+      "role": "AI Engineer",
+      "description": "Enterprise AI-powered code assistant delivered as IDE plugins with RAG pipelines, LLM serving, and a full admin portal.",
+      "phases": [
+        {
+          "year": 2024,
+          "highlights": [
+            "Code Agent on IDE plugins",
+            "RAG pipeline & preprocessing modules",
+            "Evaluation module",
+            "Open-weight LLM serving (vLLM, SGLang)"
+          ],
+          "tech": ["FastAPI", "React", "Tailwind", "LangGraph", "LangChain"]
+        },
+        {
+          "year": 2025,
+          "highlights": [
+            "Context Engineering modules",
+            "MCP module & built-in tools",
+            "Admin portal (Back-office)"
+          ],
+          "tech": ["Node.js", "SpringBoot", "Java 17", "Liquibase", "React", "FastAPI", "PostgreSQL"]
+        },
+        {
+          "year": 2026,
+          "highlights": [
+            "PoC on General Agent (Sub-Agents, Agent team concept)",
+            "DevOps SaaS"
+          ],
+          "tech": ["Node.js", "Electron", "React", "BullMQ", "SCP", "PostgreSQL", "SQLite"]
+        }
+      ]
+    },
+    "ko": {
+      "subtitle": "AI 코드 어시스턴트",
+      "role": "AI 엔지니어",
+      "description": "IDE 플러그인, RAG 파이프라인, LLM 서빙 인프라, 어드민 포털을 포함한 엔터프라이즈 AI 코드 어시스턴트.",
+      "phases": [
+        {
+          "year": 2024,
+          "highlights": [
+            "IDE 플러그인 기반 코드 에이전트",
+            "RAG 파이프라인 및 전처리 모듈",
+            "평가 모듈",
+            "오픈 웨이트 LLM 서빙 (vLLM, SGLang)"
+          ],
+          "tech": ["FastAPI", "React", "Tailwind", "LangGraph", "LangChain"]
+        },
+        {
+          "year": 2025,
+          "highlights": [
+            "컨텍스트 엔지니어링 모듈",
+            "MCP 모듈 및 빌트인 툴",
+            "어드민 포털 (백오피스)"
+          ],
+          "tech": ["Node.js", "SpringBoot", "Java 17", "Liquibase", "React", "FastAPI", "PostgreSQL"]
+        },
+        {
+          "year": 2026,
+          "highlights": [
+            "제너럴 에이전트 PoC (서브 에이전트, 에이전트 팀 개념)",
+            "DevOps SaaS"
+          ],
+          "tech": ["Node.js", "Electron", "React", "BullMQ", "SCP", "PostgreSQL", "SQLite"]
+        }
+      ]
+    }
   },
   {
     "id": "ai-sw-engineering",
     "title": "AI-augmented SW Engineering Service",
-    "role": "AI Engineer",
     "period": "Feb 2024 – Jun 2024",
     "featured": false,
-    "description": "AI-powered plugins for enterprise chat service: calculator, plot, smart search, Confluence/Jira integrations, summary, and RAG pipelines.",
-    "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"]
+    "en": {
+      "role": "AI Engineer",
+      "description": "AI-powered plugins for enterprise chat service: calculator, plot, smart search, Confluence/Jira integrations, summary, and RAG pipelines.",
+      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"]
+    },
+    "ko": {
+      "role": "AI 엔지니어",
+      "description": "엔터프라이즈 채팅 서비스용 AI 플러그인 개발: 계산기, 플롯, 스마트 검색, Confluence/Jira 연동, 요약 기능 및 RAG 파이프라인.",
+      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"]
+    }
   },
   {
     "id": "kyowon",
     "title": "Kyowon",
-    "subtitle": "Next-Gen Sales Management System",
-    "role": "Full-Stack Engineer",
     "period": "Oct 2023 – Feb 2024",
     "featured": false,
-    "description": "Full-stack web application development for enterprise back-office and operational systems.",
-    "tech": ["Vue 3", "SpringBoot", "On-premise"]
+    "en": {
+      "subtitle": "Next-Gen Sales Management System",
+      "role": "Full-Stack Engineer",
+      "description": "Full-stack web application development for enterprise back-office and operational systems.",
+      "tech": ["Vue 3", "SpringBoot", "On-premise"]
+    },
+    "ko": {
+      "subtitle": "차세대 영업 관리 시스템",
+      "role": "풀스택 엔지니어",
+      "description": "엔터프라이즈 백오피스 및 운영 시스템을 위한 풀스택 웹 애플리케이션 개발.",
+      "tech": ["Vue 3", "SpringBoot", "On-premise"]
+    }
   },
   {
     "id": "welstory",
     "title": "Samsung Welstory",
-    "subtitle": "E-commerce Platform Renewal",
-    "role": "Full-Stack Engineer",
     "period": "Dec 2022 – Sep 2023",
     "featured": false,
-    "description": "Full-stack development for web/mobile front-office and back-office in an agile environment.",
-    "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"]
+    "en": {
+      "subtitle": "E-commerce Platform Renewal",
+      "role": "Full-Stack Engineer",
+      "description": "Full-stack development for web/mobile front-office and back-office in an agile environment.",
+      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"]
+    },
+    "ko": {
+      "subtitle": "이커머스 플랫폼 리뉴얼",
+      "role": "풀스택 엔지니어",
+      "description": "애자일 환경에서 웹/모바일 프론트오피스 및 백오피스 풀스택 개발.",
+      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"]
+    }
   },
   {
     "id": "sds-oss",
     "title": "Samsung SDS",
-    "subtitle": "Open-source Management System",
-    "role": "Full-Stack Engineer",
     "period": "Apr 2022 – Oct 2022",
     "featured": false,
-    "description": "Developed enterprise back-office functionalities for internal open-source management.",
-    "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"]
+    "en": {
+      "subtitle": "Open-source Management System",
+      "role": "Full-Stack Engineer",
+      "description": "Developed enterprise back-office functionalities for internal open-source management.",
+      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"]
+    },
+    "ko": {
+      "subtitle": "오픈소스 관리 시스템",
+      "role": "풀스택 엔지니어",
+      "description": "사내 오픈소스 관리를 위한 엔터프라이즈 백오피스 기능 개발.",
+      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"]
+    }
   },
   {
     "id": "samsung-ena",
     "title": "Samsung ENA",
-    "subtitle": "Construction Materials E-commerce",
-    "role": "Full-Stack Engineer",
     "period": "Nov 2021 – Apr 2022",
     "featured": false,
-    "description": "Full-stack development for web-based front-office and back-office environments.",
-    "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"]
+    "en": {
+      "subtitle": "Construction Materials E-commerce",
+      "role": "Full-Stack Engineer",
+      "description": "Full-stack development for web-based front-office and back-office environments.",
+      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"]
+    },
+    "ko": {
+      "subtitle": "건자재 이커머스 플랫폼",
+      "role": "풀스택 엔지니어",
+      "description": "웹 기반 프론트오피스 및 백오피스 풀스택 개발.",
+      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"]
+    }
   }
 ]
