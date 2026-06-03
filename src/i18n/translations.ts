@@ -21,9 +21,11 @@ export const translations = {
       languagesLabel: 'Languages',
     },
     education: {
-      educationLabel:     'Education',
-      leadershipLabel:    'Leadership',
-      certificationsLabel:'Certifications',
+      educationLabel:      'Education',
+      leadershipLabel:     'Leadership',
+      certificationsLabel: 'Certifications',
+      referencesLabel:     'References',
+      availableOnRequest:  'Contact details available upon request.',
     },
     projects: {
       featuredLabel: 'Featured',
@@ -52,9 +54,11 @@ export const translations = {
       languagesLabel: '프로그래밍 언어',
     },
     education: {
-      educationLabel:     '학력',
-      leadershipLabel:    '대외 활동',
-      certificationsLabel:'자격증',
+      educationLabel:      '학력',
+      leadershipLabel:     '대외 활동',
+      certificationsLabel: '자격증',
+      referencesLabel:     '레퍼런스',
+      availableOnRequest:  '연락처는 요청 시 제공합니다.',
     },
     projects: {
       featuredLabel: '주요 프로젝트',

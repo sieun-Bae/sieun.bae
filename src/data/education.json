@@ -50,5 +50,17 @@
       "en": { "description": "Education Leader — taught Arduino programming to middle and high school students at the Ministry of Education programming laboratory." },
       "ko": { "description": "교육 리더로서 교육부 프로그래밍 실습실에서 중·고등학생 대상 아두이노 프로그래밍 교육 진행 및 커리큘럼 설계." }
     }
+  ],
+  "references": [
+    {
+      "name": "Gaya Nadarajan",
+      "en": { "title": "Associate Professor, Data Science", "org": "Sungkyunkwan University" },
+      "ko": { "title": "부교수, 데이터사이언스학과", "org": "성균관대학교" }
+    },
+    {
+      "name": "Sechun Park",
+      "en": { "title": "Principal Engineer · SW Architect", "org": "Samsung SDS" },
+      "ko": { "title": "수석 엔지니어 · SW 아키텍트", "org": "Samsung SDS" }
+    }
   ]
 }
