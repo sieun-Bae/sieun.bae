@@ -29,7 +29,7 @@ export const translations = {
     },
     projects: {
       featuredLabel: 'Featured',
-      viewTimeline: 'View timeline',
+      viewTimeline: 'View details',
     },
     footer: 'Seoul, Republic of Korea · Last updated June 2026',
   },
@@ -63,7 +63,7 @@ export const translations = {
     },
     projects: {
       featuredLabel: '주요 프로젝트',
-      viewTimeline: '타임라인 보기',
+      viewTimeline: '자세히 보기',
     },
     footer: '대한민국 서울 · 최종 업데이트 2026년 6월',
   },
