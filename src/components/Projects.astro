@@ -18,8 +18,13 @@ const others = projects.filter(p => !p.featured)
 
     {featured && (() => {
       const local = featured[lang]
+      const allTech = [...new Set((local.phases ?? []).flatMap((p: { tech: string[] }) => p.tech))]
       return (
-        <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-6 shadow-sm">
+        <button
+          type="button"
+          data-project-card="ai-pro"
+          class="w-full text-left bg-white rounded-2xl border border-gray-200 p-8 mb-6 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-200 cursor-pointer group"
+        >
           <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-1 gap-2">
             <div class="flex items-center gap-3 flex-wrap">
               <h3 class="text-xl font-bold text-gray-900">{featured.title}</h3>
@@ -31,29 +36,19 @@ const others = projects.filter(p => !p.featured)
             <span class="text-sm text-gray-400 shrink-0">{featured.period}</span>
           </div>
           <p class="text-sm font-medium text-blue-600 mb-4">{local.role}</p>
-          <p class="text-gray-600 mb-8">{local.description}</p>
-
-          <div class="space-y-7">
-            {(local.phases ?? []).map((phase: { year: number; highlights: string[]; tech: string[] }) => (
-              <div>
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">{phase.year}</p>
-                <ul class="space-y-1 mb-3">
-                  {phase.highlights.map((h: string) => (
-                    <li class="flex gap-2 text-sm text-gray-500">
-                      <span class="text-gray-300 shrink-0">—</span>
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div class="flex flex-wrap gap-1.5">
-                  {phase.tech.map((tech: string) => (
-                    <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
-                  ))}
-                </div>
-              </div>
+          <p class="text-gray-600 mb-6">{local.description}</p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            {allTech.map((tech: string) => (
+              <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
             ))}
           </div>
-        </div>
+          <div class="flex items-center gap-1.5 text-xs font-semibold text-blue-600 transition-all duration-200 group-hover:gap-2.5">
+            <span>{t.projects.viewTimeline}</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </button>
       )
     })()}
 
@@ -82,3 +77,101 @@ const others = projects.filter(p => !p.featured)
     </div>
   </div>
 </section>
+
+{featured && (() => {
+  const local = featured[lang]
+  return (
+    <div id="project-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+      <div
+        id="modal-backdrop"
+        class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+      ></div>
+      <div
+        id="modal-panel"
+        class="absolute inset-y-0 right-0 w-full max-w-2xl bg-white shadow-2xl overflow-y-auto translate-x-full transition-transform duration-300 ease-out"
+      >
+        <div class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-8 py-4 flex items-center justify-between z-10">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-gray-900 text-lg">{featured.title}</span>
+            {local.subtitle && <span class="text-xs text-gray-400 hidden sm:block">— {local.subtitle}</span>}
+          </div>
+          <button
+            id="close-modal-btn"
+            aria-label="Close"
+            class="p-2 rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="px-8 py-8">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-sm font-semibold text-blue-600">{local.role}</span>
+            <span class="text-gray-300">·</span>
+            <span class="text-sm text-gray-400">{featured.period}</span>
+          </div>
+          <p class="text-gray-600 mb-10 leading-relaxed">{local.description}</p>
+
+          <div class="space-y-10">
+            {(local.phases ?? []).map((phase: { year: number; highlights: string[]; tech: string[] }) => (
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="text-sm font-bold text-white bg-blue-600 px-3 py-1 rounded-full">{phase.year}</span>
+                  <div class="flex-1 h-px bg-gray-100"></div>
+                </div>
+                <ul class="space-y-2.5 mb-5">
+                  {phase.highlights.map((h: string) => (
+                    <li class="flex gap-2.5 text-sm text-gray-600">
+                      <span class="text-blue-400 shrink-0 mt-0.5">▸</span>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex flex-wrap gap-1.5">
+                  {phase.tech.map((tech: string) => (
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+})()}
+
+<script>
+  const card     = document.querySelector('[data-project-card="ai-pro"]')
+  const modal    = document.getElementById('project-modal')
+  const panel    = document.getElementById('modal-panel')
+  const backdrop = document.getElementById('modal-backdrop')
+  const closeBtn = document.getElementById('close-modal-btn')
+
+  function openModal() {
+    modal?.classList.remove('hidden')
+    requestAnimationFrame(() => {
+      backdrop?.classList.remove('opacity-0')
+      panel?.classList.remove('translate-x-full')
+    })
+    document.body.style.overflow = 'hidden'
+  }
+
+  function closeModal() {
+    panel?.classList.add('translate-x-full')
+    backdrop?.classList.add('opacity-0')
+    setTimeout(() => {
+      modal?.classList.add('hidden')
+    }, 300)
+    document.body.style.overflow = ''
+  }
+
+  card?.addEventListener('click', openModal)
+  closeBtn?.addEventListener('click', closeModal)
+  backdrop?.addEventListener('click', closeModal)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal()
+  })
+</script>
