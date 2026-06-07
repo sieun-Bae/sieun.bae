@@ -160,6 +160,7 @@ const detailProjects = projects.filter(p => !!(p[lang] as LocalData).sections?.l
     const panel    = document.getElementById(`panel-${id}`)
     const backdrop = document.getElementById(`backdrop-${id}`)
     if (!modal) return
+    if (panel) panel.scrollTop = 0
     modal.classList.remove('hidden')
     requestAnimationFrame(() => {
       backdrop?.classList.remove('opacity-0')
