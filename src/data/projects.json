@@ -5,9 +5,9 @@
     "period": "Jun 2024 – Present",
     "featured": true,
     "en": {
-      "subtitle": "AI Code Assistant",
+      "subtitle": "AI Code Agent",
       "role": "AI Engineer",
-      "description": "Enterprise AI-powered code assistant delivered as IDE plugins with RAG pipelines, LLM serving, and a full admin portal.",
+      "description": "Enterprise AI-powered code agent delivered as IDE plugins with RAG pipelines, LLM serving, and a full admin portal.",
       "phases": [
         {
           "year": 2024,
@@ -39,9 +39,9 @@
       ]
     },
     "ko": {
-      "subtitle": "AI 코드 어시스턴트",
+      "subtitle": "AI 코드 에이전트",
       "role": "AI 엔지니어",
-      "description": "IDE 플러그인, RAG 파이프라인, LLM 서빙 인프라, 어드민 포털을 포함한 엔터프라이즈 AI 코드 어시스턴트.",
+      "description": "IDE 플러그인, RAG 파이프라인, LLM 서빙 인프라, 어드민 포털을 포함한 엔터프라이즈 AI 코드 에이전트.",
       "phases": [
         {
           "year": 2024,
