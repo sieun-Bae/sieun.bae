@@ -7,8 +7,12 @@ const { lang } = Astro.props
 const t = useTranslations(lang)
 const s = t.sections.projects
 
+type Section = { title: string; bullets: string[] }
+type LocalData = { subtitle?: string; role: string; description: string; tech?: string[]; phases?: { year: number; highlights: string[]; tech: string[] }[]; sections?: Section[] }
+
 const featured = projects.find(p => p.featured)
 const others = projects.filter(p => !p.featured)
+const detailProjects = projects.filter(p => !!(p[lang] as LocalData).sections?.length)
 ---
 
 <section id="projects" class="py-24 bg-gray-50">
@@ -17,12 +21,12 @@ const others = projects.filter(p => !p.featured)
     <h2 class="text-3xl font-bold text-gray-900 mb-12">{s.heading}</h2>
 
     {featured && (() => {
-      const local = featured[lang]
-      const allTech = [...new Set((local.phases ?? []).flatMap((p: { tech: string[] }) => p.tech))]
+      const local = featured[lang] as LocalData
+      const allTech = [...new Set((local.phases ?? []).flatMap(p => p.tech))]
       return (
         <button
           type="button"
-          data-project-card="ai-pro"
+          data-open-modal={featured.id}
           class="w-full text-left bg-white rounded-2xl border border-gray-200 p-8 mb-6 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-200 cursor-pointer group"
         >
           <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-1 gap-2">
@@ -54,9 +58,13 @@ const others = projects.filter(p => !p.featured)
 
     <div class="grid md:grid-cols-2 gap-4">
       {others.map(project => {
-        const local = project[lang]
+        const local = project[lang] as LocalData
+        const hasDetail = !!local.sections?.length
         return (
-          <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-200">
+          <div
+            {...(hasDetail ? { 'data-open-modal': project.id } : {})}
+            class:list={['bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-200', hasDetail && 'cursor-pointer group']}
+          >
             <div class="flex items-start justify-between mb-1 gap-2">
               <div>
                 <h3 class="font-semibold text-gray-900">{project.title}</h3>
@@ -66,11 +74,19 @@ const others = projects.filter(p => !p.featured)
             </div>
             <p class="text-xs font-medium text-blue-600 mb-3">{local.role}</p>
             <p class="text-sm text-gray-500 mb-4">{local.description}</p>
-            <div class="flex flex-wrap gap-1.5">
+            <div class="flex flex-wrap gap-1.5" class:list={[hasDetail && 'mb-4']}>
               {(local.tech ?? []).map((tech: string) => (
                 <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
               ))}
             </div>
+            {hasDetail && (
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-blue-600 transition-all duration-200 group-hover:gap-2.5">
+                <span>{t.projects.viewTimeline}</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            )}
           </div>
         )
       })}
@@ -78,26 +94,27 @@ const others = projects.filter(p => !p.featured)
   </div>
 </section>
 
-{featured && (() => {
-  const local = featured[lang]
+{detailProjects.map(project => {
+  const local = project[lang] as LocalData
   return (
-    <div id="project-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+    <div id={`modal-${project.id}`} class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
       <div
-        id="modal-backdrop"
+        id={`backdrop-${project.id}`}
+        data-close-modal={project.id}
         class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
       ></div>
       <div class="absolute inset-0 flex items-center justify-center p-6 pointer-events-none">
         <div
-          id="modal-panel"
+          id={`panel-${project.id}`}
           class="pointer-events-auto relative w-full max-w-3xl max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-y-auto opacity-0 scale-95 transition-all duration-300 ease-out"
         >
           <div class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-8 py-4 flex items-center justify-between z-10">
             <div class="flex items-center gap-3">
-              <span class="font-bold text-gray-900 text-lg">{featured.title}</span>
+              <span class="font-bold text-gray-900 text-lg">{project.title}</span>
               {local.subtitle && <span class="text-xs text-gray-400 hidden sm:block">— {local.subtitle}</span>}
             </div>
             <button
-              id="close-modal-btn"
+              data-close-modal={project.id}
               aria-label="Close"
               class="p-2 rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
             >
@@ -111,12 +128,12 @@ const others = projects.filter(p => !p.featured)
             <div class="flex items-center gap-3 mb-2">
               <span class="text-sm font-semibold text-blue-600">{local.role}</span>
               <span class="text-gray-300">·</span>
-              <span class="text-sm text-gray-400">{featured.period}</span>
+              <span class="text-sm text-gray-400">{project.period}</span>
             </div>
             <p class="text-gray-600 mb-10 leading-relaxed">{local.description}</p>
 
             <div class="space-y-8">
-              {(local.sections ?? []).map((section: { title: string; bullets: string[] }) => (
+              {(local.sections ?? []).map((section: Section) => (
                 <div>
                   <p class="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">{section.title}</p>
                   <ul class="space-y-2.5">
@@ -135,17 +152,15 @@ const others = projects.filter(p => !p.featured)
       </div>
     </div>
   )
-})()}
+})}
 
 <script>
-  const card     = document.querySelector('[data-project-card="ai-pro"]')
-  const modal    = document.getElementById('project-modal')
-  const panel    = document.getElementById('modal-panel')
-  const backdrop = document.getElementById('modal-backdrop')
-  const closeBtn = document.getElementById('close-modal-btn')
-
-  function openModal() {
-    modal?.classList.remove('hidden')
+  function openProjectModal(id: string) {
+    const modal    = document.getElementById(`modal-${id}`)
+    const panel    = document.getElementById(`panel-${id}`)
+    const backdrop = document.getElementById(`backdrop-${id}`)
+    if (!modal) return
+    modal.classList.remove('hidden')
     requestAnimationFrame(() => {
       backdrop?.classList.remove('opacity-0')
       panel?.classList.remove('opacity-0', 'scale-95')
@@ -153,17 +168,28 @@ const others = projects.filter(p => !p.featured)
     document.body.style.overflow = 'hidden'
   }
 
-  function closeModal() {
+  function closeProjectModal(id: string) {
+    const modal    = document.getElementById(`modal-${id}`)
+    const panel    = document.getElementById(`panel-${id}`)
+    const backdrop = document.getElementById(`backdrop-${id}`)
     panel?.classList.add('opacity-0', 'scale-95')
     backdrop?.classList.add('opacity-0')
     setTimeout(() => modal?.classList.add('hidden'), 300)
     document.body.style.overflow = ''
   }
 
-  card?.addEventListener('click', openModal)
-  closeBtn?.addEventListener('click', closeModal)
-  backdrop?.addEventListener('click', closeModal)
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal()
+  document.querySelectorAll<HTMLElement>('[data-open-modal]').forEach(el => {
+    el.addEventListener('click', () => { if (el.dataset.openModal) openProjectModal(el.dataset.openModal) })
+  })
+
+  document.querySelectorAll<HTMLElement>('[data-close-modal]').forEach(el => {
+    el.addEventListener('click', () => { if (el.dataset.closeModal) closeProjectModal(el.dataset.closeModal) })
+  })
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return
+    document.querySelectorAll('[id^="modal-"]:not(.hidden)').forEach(modal => {
+      closeProjectModal(modal.id.slice(6))
+    })
   })
 </script>

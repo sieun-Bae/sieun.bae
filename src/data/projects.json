@@ -123,12 +123,48 @@
     "en": {
       "role": "AI Engineer",
       "description": "AI-powered plugins for enterprise chat service: calculator, plot, smart search, Confluence/Jira integrations, summary, and RAG pipelines.",
-      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"]
+      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"],
+      "sections": [
+        {
+          "title": "Agent Builder Platform",
+          "bullets": [
+            "Evolved to an agent builder platform by PoC conclusion — documenting contributions up to the supported phase",
+            "Register tools to agents; compose agents autonomously as steps in a larger workflow",
+            "Three-layer architecture: BO (platform management), FO (admin-facing agent design & deployment), user chat interface (workspace-joined agent sessions)"
+          ]
+        },
+        {
+          "title": "Browser Extension & Built-in Tools",
+          "bullets": [
+            "PoC browser extension chatbot with built-in tool plugins",
+            "Plot plugin: preprocesses natural-language-structured data and renders charts",
+            "Search plugin: integrated with internal smart search service"
+          ]
+        }
+      ]
     },
     "ko": {
       "role": "AI 엔지니어",
       "description": "엔터프라이즈 채팅 서비스용 AI 플러그인 개발: 계산기, 플롯, 스마트 검색, Confluence/Jira 연동, 요약 기능 및 RAG 파이프라인.",
-      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"]
+      "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"],
+      "sections": [
+        {
+          "title": "에이전트 빌더 플랫폼",
+          "bullets": [
+            "PoC 마무리 단계에서 에이전트 빌더 형태로 발전 — 직접 지원한 단계까지의 이력을 기술",
+            "에이전트에 도구를 등록하고, 각 에이전트를 워크플로우의 일부로 자율적으로 구성 가능",
+            "3계층 구조: BO(플랫폼 관리), FO(관리자의 에이전트 설계·배포), 사용자 채팅 인터페이스(워크스페이스 조인 후 에이전트 사용)"
+          ]
+        },
+        {
+          "title": "브라우저 익스텐션 & 빌트인 툴",
+          "bullets": [
+            "PoC 단계에서 브라우저 익스텐션 형태의 챗봇 구성",
+            "Plot 플러그인: 자연어로 구성된 데이터를 전처리하여 차트 렌더링",
+            "Search 플러그인: 사내 스마트 서치 서비스 연동"
+          ]
+        }
+      ]
     }
   },
   {
