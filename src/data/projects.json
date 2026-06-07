@@ -67,8 +67,15 @@
             "Async-first: supports multiple concurrent sessions",
             "Task scheduler for recurring workflow automation",
             "MCP and skill support",
-            "PoC validated — positive feedback from decision makers",
-            "Internal service; supporting SaaS expansion via DevOps — self-initiated MCP server PoC for automating external SR handling"
+            "PoC validated — positive feedback from decision makers"
+          ]
+        },
+        {
+          "title": "AI Pro — SaaS Expansion",
+          "bullets": [
+            "Currently operating as an internal service",
+            "Supporting DevOps work toward SaaS expansion",
+            "Self-initiated PoC for an MCP server to automate external SR handling for PM support"
           ]
         },
         {
@@ -149,8 +156,15 @@
             "비동기 설계: 다중 세션 동시 기동 지원",
             "반복 업무 자동화를 위한 스케줄러 기능",
             "MCP 및 스킬 지원",
-            "PoC 검증 완료, 의사결정권자 긍정적 피드백 수령",
-            "사내 서비스 운영 중; SaaS 전환 위한 DevOps 지원 — 외부 SR 처리 자동화 MCP 서버 자체 PoC 진행 중"
+            "PoC 검증 완료, 의사결정권자 긍정적 피드백 수령"
+          ]
+        },
+        {
+          "title": "사외 서비스 (SaaS)",
+          "bullets": [
+            "현재 사내 서비스로 운영 중",
+            "SaaS 전환을 위한 DevOps 업무 지원",
+            "외부 PM 지원을 위한 SR 처리 자동화 MCP 서버 자체 PoC 진행 중"
           ]
         },
         {
@@ -180,9 +194,9 @@
       "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"],
       "sections": [
         {
-          "title": "Agent Builder Platform",
+          "title": "Agent Design",
           "bullets": [
-            "Evolved to an agent builder platform by PoC conclusion (documenting up to the supported phase)",
+            "Later evolved into an agent builder platform; supported the project via scrum through that phase",
             "Tool registration per agent",
             "Agents composable as autonomous steps in larger workflows",
             "BO: platform management",
@@ -206,9 +220,9 @@
       "tech": ["LangChain", "LLM", "FastAPI", "Chrome Extension", "Chroma", "PostgreSQL", "SCP"],
       "sections": [
         {
-          "title": "에이전트 빌더 플랫폼",
+          "title": "에이전트 설계",
           "bullets": [
-            "PoC 마무리 단계에서 에이전트 빌더 형태로 발전 (직접 지원한 단계까지의 이력)",
+            "이후 에이전트 빌더 플랫폼 형태로 발전함; 그 이전까지 스크럼 방식으로 지원",
             "에이전트별 도구 등록 기능",
             "각 에이전트를 워크플로우의 일부로 자율적으로 구성 가능",
             "BO: 플랫폼 관리",
