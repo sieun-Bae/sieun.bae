@@ -250,13 +250,35 @@
       "subtitle": "Next-Gen Sales Management System",
       "role": "Full-Stack Engineer",
       "description": "Full-stack web application development for enterprise back-office and operational systems.",
-      "tech": ["Vue 3", "SpringBoot", "On-premise"]
+      "tech": ["Vue 3", "SpringBoot", "On-premise"],
+      "sections": [
+        {
+          "title": "Functional Validation & QA",
+          "bullets": [
+            "Joined at the functional validation phase of the project",
+            "Compared customer requirements against implemented logic to identify gaps",
+            "Functional gap remediation and bug fixes",
+            "Acceptance testing and sign-off coordination with the client"
+          ]
+        }
+      ]
     },
     "ko": {
       "subtitle": "차세대 영업 관리 시스템",
       "role": "풀스택 엔지니어",
       "description": "엔터프라이즈 백오피스 및 운영 시스템을 위한 풀스택 웹 애플리케이션 개발.",
-      "tech": ["Vue 3", "SpringBoot", "On-premise"]
+      "tech": ["Vue 3", "SpringBoot", "On-premise"],
+      "sections": [
+        {
+          "title": "기능 검증 & QA",
+          "bullets": [
+            "기능 검증 단계부터 프로젝트에 투입",
+            "고객사 요구사항과 구현된 기능 로직을 비교 분석하여 차이점 도출",
+            "기능 보완 및 버그 수정",
+            "고객사 기능 검수 및 인수 테스트 지원"
+          ]
+        }
+      ]
     }
   },
   {
@@ -268,13 +290,49 @@
       "subtitle": "E-commerce Platform Renewal",
       "role": "Full-Stack Engineer",
       "description": "Full-stack development for web/mobile front-office and back-office in an agile environment.",
-      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"]
+      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"],
+      "sections": [
+        {
+          "title": "Common Layer",
+          "bullets": [
+            "Built shared UI components used across the entire application",
+            "Developed common backend logic for cross-cutting concerns"
+          ]
+        },
+        {
+          "title": "Promotion Module (Full-Stack)",
+          "bullets": [
+            "Moved to the Promotion module as full-stack developer within a cross-functional team (PM, CX, Dev)",
+            "Collaborated with adjacent modules (Orders, Delivery, Products, Customers) to plan and develop mutual APIs",
+            "Query optimization in collaboration with DBA",
+            "Pair programming for smooth operations handover"
+          ]
+        }
+      ]
     },
     "ko": {
       "subtitle": "이커머스 플랫폼 리뉴얼",
       "role": "풀스택 엔지니어",
       "description": "애자일 환경에서 웹/모바일 프론트오피스 및 백오피스 풀스택 개발.",
-      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"]
+      "tech": ["React", "Styled-components", "SCSS", "SpringBoot", "MyBatis", "AWS"],
+      "sections": [
+        {
+          "title": "공통 레이어",
+          "bullets": [
+            "전체 애플리케이션에서 공통으로 사용되는 UI 컴포넌트 개발",
+            "공통 백엔드 로직 개발"
+          ]
+        },
+        {
+          "title": "프로모션 모듈 (풀스택)",
+          "bullets": [
+            "PM·CX·개발 전체 팀으로 구성된 크로스펑셔널 팀에서 풀스택 개발자로 참여",
+            "타 모듈(주문, 배송, 상품, 고객)과 협업하여 상호 필요한 API 기획 및 개발",
+            "DBA와 협업하여 쿼리 최적화",
+            "페어 프로그래밍을 통한 운영 이관 지원"
+          ]
+        }
+      ]
     }
   },
   {
@@ -286,13 +344,35 @@
       "subtitle": "Open-source Management System",
       "role": "Full-Stack Engineer",
       "description": "Developed enterprise back-office functionalities for internal open-source management.",
-      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"]
+      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"],
+      "sections": [
+        {
+          "title": "Open-source Back-office MVP",
+          "bullets": [
+            "Feature planning and MVP development of admin back-office for internal open-source management",
+            "Integrated with BlackDuck reports for license and vulnerability tracking",
+            "First internal-network DevOps experience — distinct from external deployment workflows",
+            "Applied QueryDSL for complex service logic beyond JPA coverage"
+          ]
+        }
+      ]
     },
     "ko": {
       "subtitle": "오픈소스 관리 시스템",
       "role": "풀스택 엔지니어",
       "description": "사내 오픈소스 관리를 위한 엔터프라이즈 백오피스 기능 개발.",
-      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"]
+      "tech": ["Vue 2", "SpringBoot", "JPA", "QueryDSL", "SCP"],
+      "sections": [
+        {
+          "title": "오픈소스 백오피스 MVP",
+          "bullets": [
+            "사내 오픈소스 관리를 위한 관리자용 백오피스 MVP 기능 기획 및 개발",
+            "BlackDuck 리포트 연동으로 라이선스·취약점 현황 가시화",
+            "대외망과 달리 사내망 DevOps를 처음으로 경험",
+            "JPA로 커버되지 않는 복잡한 서비스 로직에 QueryDSL 적용"
+          ]
+        }
+      ]
     }
   },
   {
@@ -304,13 +384,37 @@
       "subtitle": "Construction Materials E-commerce",
       "role": "Full-Stack Engineer",
       "description": "Full-stack development for web-based front-office and back-office environments.",
-      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"]
+      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"],
+      "sections": [
+        {
+          "title": "Full-cycle E-commerce Platform",
+          "bullets": [
+            "FO: customer-facing storefront for direct purchase of construction materials",
+            "Admin BO: product and delivery management for internal staff",
+            "Partner BO: separate portal for delivery partner companies",
+            "Role-based UI — each access level renders a distinct interface",
+            "End-to-end e-commerce development across all user personas"
+          ]
+        }
+      ]
     },
     "ko": {
       "subtitle": "건자재 이커머스 플랫폼",
       "role": "풀스택 엔지니어",
       "description": "웹 기반 프론트오피스 및 백오피스 풀스택 개발.",
-      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"]
+      "tech": ["Vue 2", "SpringBoot", "MyBatis", "NCP"],
+      "sections": [
+        {
+          "title": "전주기 이커머스 플랫폼",
+          "bullets": [
+            "FO: 외부 고객이 건자재 상품을 직접 구매하는 고객 향 쇼핑몰",
+            "관리자 BO: 상품·배송을 관리하는 내부 관리자용 백오피스",
+            "배송 업체 BO: 배송 관련 업체가 접근하는 별도 포털",
+            "권한별 상이한 화면 — 접근 권한에 따라 다른 UI 제공",
+            "전주기 이커머스 플랫폼 전반을 개발하는 경험"
+          ]
+        }
+      ]
     }
   }
 ]
