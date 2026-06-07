@@ -43,6 +43,7 @@
           "title": "Context Engineering & MCP",
           "bullets": [
             "Upgraded from completion model to chat model (OpenAI format)",
+            "Handled serving platform response differences at the application layer to ensure stable output across backends (vLLM, SGLang)",
             "Context Resolver: pre-formats local IDE context (files, docs, shell scripts) into structured model input",
             "Significantly improved response accuracy through structured context delivery",
             "System prompt engineering",
@@ -124,6 +125,7 @@
           "title": "컨텍스트 엔지니어링 & MCP",
           "bullets": [
             "Completion Model → OpenAI 포맷의 Chat Model로 서비스 전환",
+            "서빙 플랫폼(vLLM, SGLang)에 따른 모델 응답 차이를 application 단에서 처리하여 안정적인 서빙 보장",
             "Context Resolver: 로컬 IDE 환경의 파일·문서·쉘 스크립트를 구조화된 모델 입력으로 정제",
             "구조적 컨텍스트 전달로 답변 정확도 향상에 핵심적으로 기여",
             "시스템 프롬프트 엔지니어링",
