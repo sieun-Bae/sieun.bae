@@ -86,56 +86,58 @@ const others = projects.filter(p => !p.featured)
         id="modal-backdrop"
         class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
       ></div>
-      <div
-        id="modal-panel"
-        class="absolute inset-y-0 right-0 w-full max-w-2xl bg-white shadow-2xl overflow-y-auto translate-x-full transition-transform duration-300 ease-out"
-      >
-        <div class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-8 py-4 flex items-center justify-between z-10">
-          <div class="flex items-center gap-3">
-            <span class="font-bold text-gray-900 text-lg">{featured.title}</span>
-            {local.subtitle && <span class="text-xs text-gray-400 hidden sm:block">— {local.subtitle}</span>}
+      <div class="absolute inset-0 flex items-center justify-center p-6 pointer-events-none">
+        <div
+          id="modal-panel"
+          class="pointer-events-auto relative w-full max-w-3xl max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-y-auto opacity-0 scale-95 transition-all duration-300 ease-out"
+        >
+          <div class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-8 py-4 flex items-center justify-between z-10">
+            <div class="flex items-center gap-3">
+              <span class="font-bold text-gray-900 text-lg">{featured.title}</span>
+              {local.subtitle && <span class="text-xs text-gray-400 hidden sm:block">— {local.subtitle}</span>}
+            </div>
+            <button
+              id="close-modal-btn"
+              aria-label="Close"
+              class="p-2 rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-          <button
-            id="close-modal-btn"
-            aria-label="Close"
-            class="p-2 rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
 
-        <div class="px-8 py-8">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-sm font-semibold text-blue-600">{local.role}</span>
-            <span class="text-gray-300">·</span>
-            <span class="text-sm text-gray-400">{featured.period}</span>
-          </div>
-          <p class="text-gray-600 mb-10 leading-relaxed">{local.description}</p>
+          <div class="px-8 py-8">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-sm font-semibold text-blue-600">{local.role}</span>
+              <span class="text-gray-300">·</span>
+              <span class="text-sm text-gray-400">{featured.period}</span>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed">{local.description}</p>
 
-          <div class="space-y-10">
-            {(local.phases ?? []).map((phase: { year: number; highlights: string[]; tech: string[] }) => (
-              <div>
-                <div class="flex items-center gap-3 mb-4">
-                  <span class="text-sm font-bold text-white bg-blue-600 px-3 py-1 rounded-full">{phase.year}</span>
-                  <div class="flex-1 h-px bg-gray-100"></div>
+            <div class="space-y-10">
+              {(local.phases ?? []).map((phase: { year: number; highlights: string[]; tech: string[] }) => (
+                <div>
+                  <div class="flex items-center gap-3 mb-4">
+                    <span class="text-sm font-bold text-white bg-blue-600 px-3 py-1 rounded-full">{phase.year}</span>
+                    <div class="flex-1 h-px bg-gray-100"></div>
+                  </div>
+                  <ul class="space-y-2.5 mb-5">
+                    {phase.highlights.map((h: string) => (
+                      <li class="flex gap-2.5 text-sm text-gray-600">
+                        <span class="text-blue-400 shrink-0 mt-0.5">▸</span>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div class="flex flex-wrap gap-1.5">
+                    {phase.tech.map((tech: string) => (
+                      <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
+                    ))}
+                  </div>
                 </div>
-                <ul class="space-y-2.5 mb-5">
-                  {phase.highlights.map((h: string) => (
-                    <li class="flex gap-2.5 text-sm text-gray-600">
-                      <span class="text-blue-400 shrink-0 mt-0.5">▸</span>
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div class="flex flex-wrap gap-1.5">
-                  {phase.tech.map((tech: string) => (
-                    <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -154,17 +156,15 @@ const others = projects.filter(p => !p.featured)
     modal?.classList.remove('hidden')
     requestAnimationFrame(() => {
       backdrop?.classList.remove('opacity-0')
-      panel?.classList.remove('translate-x-full')
+      panel?.classList.remove('opacity-0', 'scale-95')
     })
     document.body.style.overflow = 'hidden'
   }
 
   function closeModal() {
-    panel?.classList.add('translate-x-full')
+    panel?.classList.add('opacity-0', 'scale-95')
     backdrop?.classList.add('opacity-0')
-    setTimeout(() => {
-      modal?.classList.add('hidden')
-    }, 300)
+    setTimeout(() => modal?.classList.add('hidden'), 300)
     document.body.style.overflow = ''
   }
 
