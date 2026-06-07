@@ -29,32 +29,45 @@
         {
           "title": "RAG Pipeline",
           "bullets": [
-            "Evolved from naive RAG to advanced RAG to improve document precision and recall",
-            "Preprocessing module: AST parsing + code summarization for codebases (Vue, React.js, Python, Java); parent-document retrieval to prevent keyword loss at chunk boundaries; metadata refinement pipeline",
-            "Query rewriting for ambiguous user inputs; reranking for top-k document prioritization",
-            "Proposed and built an Admin Playground for comparing embedding, reranking, and LLM model combinations side-by-side on the same query",
-            "Weaviate vector DB: hybrid search (dense vector + BM25 keyword)"
+            "Evolved from naive RAG to advanced RAG — improved document precision and recall",
+            "Codebase preprocessing: AST parsing + code summarization (Vue, React.js, Python, Java)",
+            "General doc preprocessing: parent-document retrieval to prevent keyword loss at chunk boundaries",
+            "Metadata refinement pipeline for improved retrieval relevance",
+            "Query rewriting for ambiguous user inputs",
+            "Reranking for top-k document prioritization",
+            "Admin Playground: side-by-side comparison of embedding / reranking / LLM model combinations",
+            "Weaviate vector DB — hybrid search (dense vector + BM25 keyword)"
           ]
         },
         {
           "title": "Context Engineering & MCP",
           "bullets": [
-            "Upgraded service from completion model to chat model (OpenAI format)",
-            "Designed and built a Context Resolver — pre-formats local IDE context (files, docs, shell scripts) into structured model input; key driver of response accuracy improvement",
-            "System prompt engineering; proposed and built an Evaluation Server for benchmark-driven prompt quality measurement",
-            "MCP client implementation: collaborated with internal Jira and Confluence teams on MCP server protocol; built connection management and tool-calling logic",
-            "Context window management: per-user tool on/off toggle; MCP server metadata routing to load only relevant tool subsets; content truncation strategy"
+            "Upgraded from completion model to chat model (OpenAI format)",
+            "Context Resolver: pre-formats local IDE context (files, docs, shell scripts) into structured model input",
+            "Significantly improved response accuracy through structured context delivery",
+            "System prompt engineering",
+            "Evaluation Server: benchmark pipeline to quantify prompt quality improvements",
+            "MCP client: collaborated with internal Jira & Confluence teams on server communication protocol",
+            "Built MCP connection management and tool-calling logic",
+            "Per-user tool on/off toggle for context window control",
+            "MCP server metadata routing — loads only relevant tool subsets",
+            "Content truncation strategy to prevent context window overflow",
+            "Chat history compression: once a defined threshold is reached, compresses 80% of chat history and passes the condensed context forward — enables continuous work within a limited context window"
           ]
         },
         {
           "title": "General Agent (PoC)",
           "bullets": [
-            "Local application with configurable model endpoint; supervisor pattern with a central orchestrator",
-            "Sub-agents: Planner (long-horizon workflows), Office document agent, Search agent (multimodal), Execution agent, Browser interaction agent",
-            "Abstracted key agents for non-developer personas; led overall architecture design and implementation",
-            "Async-first design supporting multiple concurrent sessions; task scheduler for recurring workflow automation",
-            "MCP and skill support; PoC validated — positive feedback from decision makers",
-            "Currently an internal service; supporting DevOps work toward SaaS expansion — self-initiated PoC for an MCP server to automate external SR handling for PM support"
+            "Local application with configurable model endpoint",
+            "Supervisor pattern: central orchestrator managing sub-agents",
+            "Sub-agents: Planner, Office document, Search (multimodal), Execution, Browser interaction",
+            "Abstracted key agents for non-developer personas",
+            "Led overall architecture design and implementation",
+            "Async-first: supports multiple concurrent sessions",
+            "Task scheduler for recurring workflow automation",
+            "MCP and skill support",
+            "PoC validated — positive feedback from decision makers",
+            "Internal service; supporting SaaS expansion via DevOps — self-initiated MCP server PoC for automating external SR handling"
           ]
         }
       ]
@@ -84,32 +97,45 @@
         {
           "title": "RAG 파이프라인",
           "bullets": [
-            "Naive RAG에서 Advanced RAG로 고도화, 검색 문서의 Precision/Recall 향상",
-            "전처리 모듈: 코드베이스는 AST 파싱 + 코드 서머리로 검색 최적화 (Vue, React.js, Python, Java); 일반 문서는 Parent Document Retrieval 구조로 청크 경계 키워드 누락 방지; 메타데이터 정제 파이프라인",
-            "모호한 사용자 쿼리 대응을 위한 Query Rewriting; Reranking으로 Top-k 문서 반환",
-            "동일 질의에 임베딩·리랭킹·LLM 모델 조합을 비교 테스트하는 Admin Playground 기획 및 개발",
-            "Weaviate 벡터 DB: 하이브리드 검색 지원 (Dense Vector + BM25 키워드 검색)"
+            "Naive RAG → Advanced RAG 고도화, 검색 문서의 Precision/Recall 향상",
+            "코드베이스 전처리: AST 파싱 + 코드 서머리 (Vue, React.js, Python, Java)",
+            "일반 문서 전처리: Parent Document Retrieval — 청크 경계 키워드 누락 방지",
+            "메타데이터 정제 파이프라인으로 검색 정확도 향상",
+            "모호한 사용자 쿼리 대응을 위한 Query Rewriting",
+            "Reranking으로 Top-k 문서 우선순위 반환",
+            "Admin Playground: 동일 질의에 임베딩·리랭킹·LLM 모델 조합 비교 테스트",
+            "Weaviate 벡터 DB — 하이브리드 검색 (Dense Vector + BM25 키워드 검색)"
           ]
         },
         {
           "title": "컨텍스트 엔지니어링 & MCP",
           "bullets": [
-            "Completion Model 기반 어시스턴트에서 OpenAI 포맷의 Chat Model로 서비스 전환",
-            "로컬 IDE 환경의 파일·문서·쉘 스크립트를 모델 입력 전 정제하는 Context Resolver 설계 및 개발 — 답변 정확도 향상의 핵심 기여",
-            "시스템 프롬프트 엔지니어링; 복수 벤치마크 수행 및 개선 수치화를 위한 Evaluation Server 기획·개발",
-            "MCP 클라이언트 구현: 사내 Jira·Confluence 팀과 MCP Server 통신 방식 협업; Connection 및 Tool Calling 기능 개발",
-            "컨텍스트 윈도우 관리: 사용자별 도구 On/Off 토글, MCP 서버 메타데이터 라우팅으로 연관 도구 서브셋 로드, 콘텐츠 트런케이션 전략"
+            "Completion Model → OpenAI 포맷의 Chat Model로 서비스 전환",
+            "Context Resolver: 로컬 IDE 환경의 파일·문서·쉘 스크립트를 구조화된 모델 입력으로 정제",
+            "구조적 컨텍스트 전달로 답변 정확도 향상에 핵심적으로 기여",
+            "시스템 프롬프트 엔지니어링",
+            "Evaluation Server: 벤치마크 파이프라인으로 프롬프트 품질 개선 수치화",
+            "MCP 클라이언트: 사내 Jira·Confluence 팀과 MCP Server 통신 방식 협업",
+            "MCP Connection 관리 및 Tool Calling 기능 개발",
+            "사용자별 도구 On/Off 토글로 컨텍스트 윈도우 제어",
+            "MCP 서버 메타데이터 라우팅 — 연관 도구 서브셋만 로드",
+            "컨텍스트 윈도우 초과 방지를 위한 콘텐츠 트런케이션 전략",
+            "Chat history 압축 기능 기획·개발: 정의한 임계치 도달 시 Chat history의 80%를 압축하여 현재 이어진 대화 컨텍스트를 context window에 전달 — 한정된 context window에서 고효율로 작업 지속"
           ]
         },
         {
           "title": "범용 에이전트 (PoC)",
           "bullets": [
-            "모델 엔드포인트 설정이 가능한 로컬 애플리케이션; Supervisor 패턴 기반 중앙 오케스트레이터 설계",
-            "서브 에이전트 구성: Planner (장기 워크플로우), Office 문서 에이전트, 검색 에이전트 (멀티모달), 실행 에이전트, 브라우저 인터랙션 에이전트",
-            "비개발 직군 활용을 위한 주요 에이전트 추상화; 전반적인 아키텍처 설계 및 개발 주도",
-            "비동기 에이전트 설계, 다중 세션 동시 기동 지원; 반복 업무 자동화를 위한 스케줄러 기능",
-            "MCP 및 스킬 지원; PoC 검증 완료, 의사결정권자 긍정적 피드백 수령",
-            "현재 사내 서비스 운영 중; SaaS 전환을 위한 DevOps 업무 지원 중 — 외부 PM 지원을 위한 SR 처리 자동화 MCP 서버 자체 PoC 진행 중"
+            "모델 엔드포인트 설정이 가능한 로컬 애플리케이션",
+            "Supervisor 패턴: 중앙 오케스트레이터 기반 서브 에이전트 관리",
+            "서브 에이전트: Planner, Office 문서, 검색 (멀티모달), 실행, 브라우저 인터랙션",
+            "비개발 직군 활용을 위한 주요 에이전트 추상화",
+            "전반적인 아키텍처 설계 및 개발 주도",
+            "비동기 설계: 다중 세션 동시 기동 지원",
+            "반복 업무 자동화를 위한 스케줄러 기능",
+            "MCP 및 스킬 지원",
+            "PoC 검증 완료, 의사결정권자 긍정적 피드백 수령",
+            "사내 서비스 운영 중; SaaS 전환 위한 DevOps 지원 — 외부 SR 처리 자동화 MCP 서버 자체 PoC 진행 중"
           ]
         }
       ]
@@ -128,15 +154,18 @@
         {
           "title": "Agent Builder Platform",
           "bullets": [
-            "Evolved to an agent builder platform by PoC conclusion — documenting contributions up to the supported phase",
-            "Register tools to agents; compose agents autonomously as steps in a larger workflow",
-            "Three-layer architecture: BO (platform management), FO (admin-facing agent design & deployment), user chat interface (workspace-joined agent sessions)"
+            "Evolved to an agent builder platform by PoC conclusion (documenting up to the supported phase)",
+            "Tool registration per agent",
+            "Agents composable as autonomous steps in larger workflows",
+            "BO: platform management",
+            "FO: admin-facing interface for agent design & deployment",
+            "User interface: chat list for joining agents to a workspace"
           ]
         },
         {
           "title": "Browser Extension & Built-in Tools",
           "bullets": [
-            "PoC browser extension chatbot with built-in tool plugins",
+            "PoC: browser extension chatbot",
             "Plot plugin: preprocesses natural-language-structured data and renders charts",
             "Search plugin: integrated with internal smart search service"
           ]
@@ -151,9 +180,12 @@
         {
           "title": "에이전트 빌더 플랫폼",
           "bullets": [
-            "PoC 마무리 단계에서 에이전트 빌더 형태로 발전 — 직접 지원한 단계까지의 이력을 기술",
-            "에이전트에 도구를 등록하고, 각 에이전트를 워크플로우의 일부로 자율적으로 구성 가능",
-            "3계층 구조: BO(플랫폼 관리), FO(관리자의 에이전트 설계·배포), 사용자 채팅 인터페이스(워크스페이스 조인 후 에이전트 사용)"
+            "PoC 마무리 단계에서 에이전트 빌더 형태로 발전 (직접 지원한 단계까지의 이력)",
+            "에이전트별 도구 등록 기능",
+            "각 에이전트를 워크플로우의 일부로 자율적으로 구성 가능",
+            "BO: 플랫폼 관리",
+            "FO: 관리자가 에이전트를 설계·배포하는 인터페이스",
+            "사용자 인터페이스: 워크스페이스에 에이전트를 조인하여 사용하는 채팅 목록"
           ]
         },
         {
