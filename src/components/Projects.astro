@@ -7,7 +7,7 @@ const { lang } = Astro.props
 const t = useTranslations(lang)
 const s = t.sections.projects
 
-type Section = { title: string; bullets: string[] }
+type Section = { title: string; bullets: string[]; divider?: boolean }
 type LocalData = { subtitle?: string; role: string; description: string; tech?: string[]; phases?: { year: number; highlights: string[]; tech: string[] }[]; sections?: Section[] }
 
 const featured = projects.find(p => p.featured)
@@ -134,7 +134,7 @@ const detailProjects = projects.filter(p => !!(p[lang] as LocalData).sections?.l
 
             <div class="space-y-8">
               {(local.sections ?? []).map((section: Section) => (
-                <div>
+                <div class:list={[section.divider && 'border-t border-gray-100 pt-8']}>
                   <p class="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">{section.title}</p>
                   <ul class="space-y-2.5">
                     {section.bullets.map((b: string) => (

@@ -69,6 +69,19 @@
             "PoC validated — positive feedback from decision makers",
             "Internal service; supporting SaaS expansion via DevOps — self-initiated MCP server PoC for automating external SR handling"
           ]
+        },
+        {
+          "title": "Challenges & Lessons Learned",
+          "divider": true,
+          "bullets": [
+            "Conservative workflow: validate thoroughly before surfacing results to users",
+            "Sensitive credentials filtered at the middleware layer (filter service) before reaching the server — proactively preventing server-side exposure",
+            "Local resource access: private paths may exist — designed an ignore-list feature so users can exclude specific files or directories",
+            "Server resource access: tokens and secrets stored in the user's local environment; encryption required when local storage is not an option",
+            "Automation features (e.g. auto-run) are always opt-in — users explicitly choose what runs autonomously",
+            "Features evolved at a daily pace — extensible architecture was more critical than ever",
+            "Staying adaptable and maintaining a flexible mindset proved just as important as the technical design itself"
+          ]
         }
       ]
     },
@@ -136,6 +149,19 @@
             "MCP 및 스킬 지원",
             "PoC 검증 완료, 의사결정권자 긍정적 피드백 수령",
             "사내 서비스 운영 중; SaaS 전환 위한 DevOps 지원 — 외부 SR 처리 자동화 MCP 서버 자체 PoC 진행 중"
+          ]
+        },
+        {
+          "title": "어려웠던 점 & 배운 것",
+          "divider": true,
+          "bullets": [
+            "워크플로우는 보수적으로: 충분한 검증을 거친 결과만 사용자에게 제공",
+            "민감한 credential·개인정보는 서버 도달 전 미들웨어 레이어(Filter Service)에서 선제 처리 — 서버를 통하지 않도록 설계",
+            "로컬 자원 접근: private할 수 있으므로 사용자가 특정 파일·경로를 ignore할 수 있도록 기능 기획",
+            "서버 자원 접근: 통신에 필요한 token 등의 secret을 사용자 로컬 환경에 저장 후 통신; 불가 시 암호화 필수",
+            "Auto-run 등 자동화 기능은 사용자가 명시적으로 선택할 수 있도록 기획 (Opt-in)",
+            "기능이 하루 단위로 빠르게 생기고 변했기 때문에, 확장성 있는 설계가 그 어느 때보다 중요했음",
+            "유연한 멘탈 또한 기술적 설계만큼 중요한 요소였음"
           ]
         }
       ]
