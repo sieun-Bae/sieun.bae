@@ -19,10 +19,10 @@
     { "name": "Jr. Samsung Certified Professional (AI)", "issuer": "Samsung",              "year": 2026 },
     { "name": "SW Architect (Associate)",                "issuer": "Samsung",              "year": 2024 },
     { "name": "AWS Certified Solutions Architect (Associate)", "issuer": "Amazon Web Services", "year": 2022 },
-    { "name": "Big Data Analysis Engineer",              "issuer": "HRD Korea",            "year": 2022 },
+    { "name": "Big Data Analysis Engineer",              "issuer": "HRD Korea",            "year": 2022, "ko": { "name": "빅데이터처리기사" } },
     { "name": "ADsP",                                    "issuer": "Korea Database Agency","year": 2022 },
     { "name": "SW Algorithm (Professional)",             "issuer": "Samsung",              "year": 2021 },
-    { "name": "Engineer Information Processing",         "issuer": "HRD Korea",            "year": 2021 },
+    { "name": "Engineer Information Processing",         "issuer": "HRD Korea",            "year": 2021, "ko": { "name": "정보처리기사" } },
     { "name": "SQLd",                                    "issuer": "Korea Database Agency","year": 2021 }
   ],
   "leadership": [
